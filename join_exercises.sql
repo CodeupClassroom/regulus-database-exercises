@@ -42,21 +42,21 @@ VALUES ('david', 'david@example.com', 2),
        ('ry', 'ry@example.com', null);
 
 
-SELECT users.name as user_name, roles.name as role_name
+SELECT users.name AS user_name, roles.name AS role_name
 FROM users
          JOIN roles ON users.role_id = roles.id;
 
-SELECT users.name as user_name, roles.name as role_name
+SELECT users.name AS user_name, roles.name AS role_name
 FROM users
          LEFT JOIN roles ON users.role_id = roles.id;
 
-SELECT users.name as user_name, roles.name as role_name
+SELECT users.name AS user_name, roles.name AS role_name
 FROM users
          RIGHT JOIN roles ON users.role_id = roles.id;
 
-SELECT roles.name as 'Role', COUNT(u.role_id) as 'Count'
+SELECT roles.name AS 'Role', COUNT(u.role_id) AS 'Count'
 FROM roles
-         LEFT JOIN users u on roles.id = u.role_id
+         LEFT JOIN users u ON roles.id = u.role_id
 GROUP BY roles.name;
 
 
@@ -111,7 +111,7 @@ FROM employees AS e
          JOIN dept_manager dm ON d.dept_no = dm.dept_no AND dm.to_date > CURDATE()
          JOIN employees e2 ON e2.emp_no = dm.emp_no
 WHERE de.to_date > CURDATE()
-ORDER BY d.dept_name
+ORDER BY d.dept_name;
 
 
 
