@@ -123,23 +123,3 @@ FROM employees AS e
          JOIN departments AS dep
               ON de.dept_no = dep.dept_no
 WHERE dep.dept_name = 'Sales'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
