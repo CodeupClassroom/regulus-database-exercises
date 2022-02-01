@@ -122,4 +122,4 @@ FROM employees AS e
 #     MAKE CONNECTION BETWEEN PLAYER POSITION AND POSITIONS
          JOIN departments AS dep
               ON de.dept_no = dep.dept_no
-WHERE dep.dept_name = 'Sales'
+WHERE dep.dept_name = 'Sales';
